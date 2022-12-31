@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>BREAST CANCER PREDICTION</title>
+  </head>
+  <body>
+    
+
+  <center style="background-color: rgba(120, 46, 252, 0.4); padding: 10px; color: white;"><div><h2><u>BREAST CANCER PREDICTION</u></h2></div></center>
+  <div class="container"><div class="container">
+    <form method="POST" action="{{ url_for('predict')}}" enctype="multipart/form-data">
+    <div class="rows" style="background-color: rgba(20, 46, 252, 0.4);">
+    <center>
+        <div class="form-group col-md-8">
+            <table class="table">
+
+           
+                <tr><td><label> radius_mean :</label> </td> <td><input type='text' class="form-control" name="radius_mean" placeholder="Ex: 1999, 2000, 2001..."></td></tr>
+               
+                <tr><td><label>texture_mean	 :</label></td> <td><input type='text' class="form-control" name="texture_mean" placeholder="Showroom price"></td></tr>
+    
+                <tr><td><label>perimeter_mean :</label></td> <td><input type='text' class="form-control" name="perimeter_mean" placeholder="kilometer driven"></td></tr>
+    
+                <tr><td><label>area_mean :</label></td> <td><input type='text' class="form-control" name="area_mean" placeholder="eg 0,1,2"></td></tr>
+                
+                <tr><td><label>fractal_dimension_se :</label></td> <td><input type='text' class="form-control" name="fractal_dimension_se" placeholder="eg 0,1,2"></td></tr>
+                
+                <tr><td><label>concavity_mean :</label></td> <td><input type='text' class="form-control" name="concavity_mean" placeholder="Showroom price"></td></tr>
+    
+                <tr><td><label>concave_points_mean :</label></td> <td><input type='text' class="form-control" name="concave_points_mean" placeholder="kilometer driven"></td></tr>
+    
+                <tr><td><label>texture_se :</label></td> <td><input type='text' class="form-control" name="texture_se" placeholder="eg 0,1,2"></td></tr>
+                
+                <tr><td><label>perimeter_se	:</label></td> <td><input type='text' class="form-control" name="perimeter_se" placeholder="Showroom price"></td></tr>
+    
+                <tr><td><label>area_se :</label></td> <td><input type='text' class="form-control" name="area_se" placeholder="kilometer driven"></td></tr>
+    
+                <tr><td><label>perimeter_worst :</label></td> <td><input type='text' class="form-control" name="perimeter_worst" placeholder="eg 0,1,2"></td></tr>
+                
+                <tr><td><label>compactness_worst :</label></td> <td><input type='text' class="form-control" name="compactness_worst" placeholder="Showroom price"></td></tr>
+    
+                <tr><td><label>concavity_worst :</label></td> <td><input type='text' class="form-control" name="concavity_worst" placeholder="kilometer driven"></td></tr>
+    
+                <tr><td><label>concave_points_worst :</label></td> <td><input type='text' class="form-control" name="concave_points_worst" placeholder="eg 0,1,2"></td></tr>
+
+
+
+
+
+            
+            <td><center><button type="submit" class="btn btn-primary">Predict</button></center></td></tr>
+            </table>
+        </div>
+
+    </center>
+    </div>
+        </form>
+        <center><h3>{{ prediction_text }}</h3> </center>>
+
+  </div></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
